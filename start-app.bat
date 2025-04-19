@@ -1,0 +1,3 @@
+@echo off
+echo Starting the TechTrove app...
+npm start 

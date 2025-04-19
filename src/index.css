@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html.dark {
+    @apply bg-gray-900;
+  }
+  
+  body {
+    @apply bg-neutral-100 text-neutral-700 antialiased;
+  }
+  
+  .dark body {
+    @apply bg-gray-900 text-gray-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-white;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+  
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors duration-200;
+  }
+  
+  .dark a {
+    @apply text-indigo-400 hover:text-indigo-300;
+  }
+  
+  section {
+    @apply bg-white;
+  }
+  
+  .dark section {
+    @apply bg-gray-900 border-gray-800;
+  }
+  
+  input, textarea, select {
+    @apply bg-white border-neutral-200;
+  }
+  
+  .dark input, .dark textarea, .dark select {
+    @apply bg-gray-800 text-white border-gray-700;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 inline-flex items-center justify-center;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+  
+  .dark .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+  
+  .dark .btn-secondary {
+    @apply bg-purple-700 hover:bg-purple-800;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent/90;
+  }
+  
+  .dark .btn-accent {
+    @apply bg-teal-600 hover:bg-teal-700;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .dark .btn-outline {
+    @apply border-indigo-400 text-indigo-400 hover:bg-indigo-600;
+  }
+  
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .dark .card {
+    @apply bg-gray-800 shadow-gray-900;
+  }
+}
+
+/* Dark mode transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
